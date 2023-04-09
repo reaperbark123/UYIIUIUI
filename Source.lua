@@ -7,7 +7,7 @@ do
 
     -- Ui class
     do
-        function Ui.new(title: string, minSize: Vector2?, maxSize: Vector2?, visible: bool)
+        function Ui.new(title: string, minSize: Vector2?, maxSize: Vector2?)
             local renderWindow = RenderWindow.new(title)
 
             if minSize then
@@ -18,7 +18,7 @@ do
                 renderWindow.MaxSize = maxSize
             end
 
-            renderWindow.VisibilityOverride = visible
+            renderWindow.VisibilityOverride = false
             
             local tabMenu = renderWindow:TabMenu()
 
